@@ -1,12 +1,12 @@
-<?php namespace Xavrsl\Cas;
+<?php namespace Li\MultiCas;
 
 use phpCAS;
 
 /**
  * CAS authenticator
  *
- * @package Xavrsl
- * @author Xavier Roussel
+ * @package Li\MultiCas
+ * @author liyunde
  */
 class Sso {
 

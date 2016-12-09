@@ -1,52 +1,38 @@
-CAS
+MultiCAS
 ===
 
-CAS server SSO authentication in Laravel 4.x & 5.x
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Total Downloads][ico-downloads]][link-downloads]
+
+Multi CAS server SSO authentication in Laravel 5.x
+
+this lib base on xavrsl/cas v1.2.5 ,thank author.
 
 ## Installation
 
 Require this package in your composer.json and run composer update.
 
-For Laravel 4 use v1.1.* :
-
-    "xavrsl/cas": "1.1.*"
-
 For Laravel 5 use v1.2.* :
 
-    "xavrsl/cas": "1.2.*"
+    composer require liyunde/Laravel5Cas
 
 After updating composer, add the ServiceProvider to the providers array:
-
-For Laravel 4:
-
-app/config/app.php
-
-```php
-    'Xavrsl\Cas\CasServiceProvider',
-```
-As well as the Facade :
-```php
-	'Cas' => 'Xavrsl\Cas\Facades\Cas',
-```
 
 For Laravel 5:
 
 config/app.php
 
 ```php
-    Xavrsl\Cas\CasServiceProvider::class,
+    Li\MultiCas\CasServiceProvider::class,
 ```
 As well as the Facade :
 ```php
-	'Cas'       => Xavrsl\Cas\Facades\Cas::class,
+	'Cas'       => Li\MultiCas\Facades\Cas::class,
 ```
 
 Then publish the package's config using one of those methods :
-
-For Laravel 4 :
-```
-    $ php artisan config:publish xavrsl/cas
-```
 
 For Laravel 5 :
 ```
@@ -67,17 +53,16 @@ Authenticate against the CAS server. This should be called before trying to retr
 
 ```php
 	Cas::authenticate();
+	OR
+	Cas::default->authenticate();
 ```
 
 Then get the current user id this way :
 
 ```php
 	Cas::getCurrentUser();
+	OR
+	Cas::user();
+	
+	Cas::default->user();
 ```
-
-OR
-
-```php
-  Cas::user();
-```
-

@@ -1,0 +1,15 @@
+.idea/
+.vagrant/
+*.DS_Store
+._*
+*.swap
+.metadata
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.local
+.settings/
+.project
+composer.lock
+vendor/
