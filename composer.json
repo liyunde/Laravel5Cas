@@ -3,6 +3,8 @@
     "description": "Multi CAS server SSO authentication for Laravel 5",
 	"keywords": ["CAS", "phpCAS", "SSO", "laravel","MultiCAS"],
 	"license": "MIT",
+    "type": "library",
+    "minimum-stability":"stable",
     "authors": [
         {
             "name": "Xavier Roussel",
