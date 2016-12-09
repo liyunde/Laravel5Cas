@@ -56,7 +56,7 @@ Authenticate against the CAS server. This should be called before trying to retr
 ```php
 	Cas::authenticate();
 	OR
-	Cas::default->authenticate();
+	Cas::default()->authenticate();
 ```
 
 Then get the current user id this way :
@@ -66,5 +66,5 @@ Then get the current user id this way :
 	OR
 	Cas::user();
 	
-	Cas::default->user();
+	Cas::default()->user();
 ```

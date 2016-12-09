@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * Class Cas
+ * @package MultiCas\Facades
+ *
+ * @method \MultiCas\CasServer default()
+ */
 class Cas extends Facade {
 
 	/**

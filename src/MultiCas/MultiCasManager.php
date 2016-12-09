@@ -6,7 +6,6 @@
  */
 class MultiCasManager
 {
-
     private $config;
 
     /**
@@ -24,45 +23,25 @@ class MultiCasManager
         if (!isset($config['default'])) throw new \InvalidArgumentException('配置信息丢失');
 
         $this->config = $config;
+
+        foreach ($config as $k=>$item){
+
+            $this->connections[$k] = new CasServer($item);
+        }
     }
 
     /**
      * @param string $conf
-     * @return Sso|void
+     * @return mixed | CasServer
      */
     public function connection($conf = 'default')
     {
         if (!isset($this->connections[$conf])) {
-            $this->connections[$conf] = $this->createConnection($conf);
+
+            throw new \InvalidArgumentException("没有配置 {$conf} 的登陆信息");
         }
 
         return $this->connections[$conf];
-    }
-
-    /**
-     * @param string $conf
-     *
-     * @return Sso
-     */
-    protected function createConnection($conf = 'default')
-    {
-        if (!isset($this->config[$conf])) throw new \Exception("配置信息丢失");
-
-        $connection = new Sso($this->config[$conf]);
-
-        return $connection;
-    }
-
-    /**
-     * @param $name
-     * @return mixed
-     * @throws \Exception
-     */
-    public function __get($name)
-    {
-        if (isset($this->config[$name])) return $this->connection($name);
-
-        throw new \Exception('无效的配置');
     }
 
     /**
@@ -74,6 +53,11 @@ class MultiCasManager
      */
     public function __call($method, $parameters)
     {
+        if(isset($this->config[$method])){
+
+            return $this->connection($method);
+        }
+
         return call_user_func_array([$this->connection(), $method], $parameters);
     }
 
