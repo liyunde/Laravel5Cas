@@ -4,7 +4,7 @@
 	"keywords": ["CAS", "phpCAS", "SSO", "laravel","MultiCAS"],
 	"license": "MIT",
     "type": "library",
-    "minimum-stability":"stable",
+    "minimum-stability":"dev",
     "authors": [
         {
             "name": "Xavier Roussel",
