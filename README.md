@@ -27,11 +27,11 @@ For Laravel 5:
 config/app.php
 
 ```php
-    Li\MultiCas\CasServiceProvider::class,
+    MultiCas\CasServiceProvider::class,
 ```
 As well as the Facade :
 ```php
-	'Cas'       => Li\MultiCas\Facades\Cas::class,
+	'Cas'       => MultiCas\Facades\Cas::class,
 ```
 
 Then publish the package's config using one of those methods :

@@ -1,4 +1,4 @@
-<?php namespace Li\MultiCas;
+<?php namespace MultiCas;
 
 use Illuminate\Support\ServiceProvider;
 

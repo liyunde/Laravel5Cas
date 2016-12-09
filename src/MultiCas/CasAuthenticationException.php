@@ -1,4 +1,4 @@
-<?php namespace Li\MultiCas;
+<?php namespace MultiCas;
 
 class CasAuthenticationException  extends \Exception{
 

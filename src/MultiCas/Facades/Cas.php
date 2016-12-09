@@ -1,4 +1,4 @@
-<?php namespace Li\MultiCas\Facades;
+<?php namespace MultiCas\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

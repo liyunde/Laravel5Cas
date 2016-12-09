@@ -1,11 +1,8 @@
-<?php namespace Li\MultiCas;
-
-use Illuminate\Auth\AuthManager;
-use Illuminate\Session\SessionManager;
+<?php namespace MultiCas;
 
 /**
  * Class MultiCasManager
- * @package Li\MultiCas
+ * @package MultiCas
  */
 class MultiCasManager
 {
