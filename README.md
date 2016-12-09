@@ -8,15 +8,17 @@ MultiCAS
 
 Multi CAS server SSO authentication in Laravel 5.x
 
-this lib base on xavrsl/cas v1.2.5 ,thank author.
+this version base on xavrsl/cas v1.2.5 Compatible with the original version usage,thank author.
+
+this version only use on multi diffent domain cas server in same project
 
 ## Installation
 
 Require this package in your composer.json and run composer update.
 
-For Laravel 5 use v1.2.* :
+For Laravel 5:
 
-    composer require liyunde/Laravel5Cas
+    composer require liyunde/laravel5-multi-cas
 
 After updating composer, add the ServiceProvider to the providers array:
 
@@ -44,7 +46,7 @@ Configuration
 
 Configuration should be pretty straightforward for anyone who's ever used the phpCAS client. Using the .env file will allow you to have different environments without even touching the cas.php config file. I've added the possibility to easily turn your application into a CAS Proxy, a CAS Service or both. You only need to set the cas_proxy setting to true (if you need to proxy services) and set the cas_service to whatever proxy you want to allow (this is all explained in the config file).
 
-A new config variable (cas_pretend_user) available in the 1.2 release allows you to pretend to be a selected CAS user. The idea came with the usage of laravel homestead. My application was running on a private network, on a fake domain. The CAS server was not able to redirect to that application. So activating the CAS plugin on that application was not possible, but I needed a user id to query my LDAP and allow/disallow the user in my application. You only need to give it a user id and the application will act just as if you ware logged in with that CAS user.
+A new config variable (cas_pretend_user) available in the release allows you to pretend to be a selected CAS user. The idea came with the usage of laravel homestead. My application was running on a private network, on a fake domain. The CAS server was not able to redirect to that application. So activating the CAS plugin on that application was not possible, but I needed a user id to query my LDAP and allow/disallow the user in my application. You only need to give it a user id and the application will act just as if you ware logged in with that CAS user.
 
 Usage
 ==

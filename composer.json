@@ -1,5 +1,5 @@
 {
-    "name": "liyunde/Laravel5Cas",
+    "name": "liyunde/laravel5-multi-cas",
     "description": "Multi CAS server SSO authentication for Laravel 5",
 	"keywords": ["CAS", "phpCAS", "SSO", "laravel","MultiCAS"],
 	"license": "MIT",

@@ -12,7 +12,7 @@ class CasServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 	    $this->publishes([
-            __DIR__.'/../../config/cas.php' => config_path('cas.php'),
+            __DIR__.'/../config/cas.php' => config_path('cas.php'),
 	    ]);
 	}
 
