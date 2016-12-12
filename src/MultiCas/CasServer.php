@@ -6,11 +6,11 @@
  * Time: 18:40
  */
 
-namespace MultiCas;
+namespace LIYunde\MultiCas;
 
 /**
  * @project laravel5-multi-cas
- * @package MultiCas
+ * @package LIYunde\MultiCas
  * @author liyunde
  */
 class CasServer

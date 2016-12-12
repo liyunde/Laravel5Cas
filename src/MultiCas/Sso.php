@@ -1,11 +1,11 @@
-<?php namespace MultiCas;
+<?php namespace LIYunde\MultiCas;
 
 use phpCAS;
 
 /**
  * CAS authenticator
  *
- * @package Li\MultiCas
+ * @package LIYunde\MultiCas
  * @author liyunde
  */
 class Sso {

@@ -1,12 +1,12 @@
-<?php namespace MultiCas\Facades;
+<?php namespace LIYunde\MultiCas\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Cas
- * @package MultiCas\Facades
+ * @package LIYunde\MultiCas\Facades
  *
- * @method \MultiCas\CasServer default()
+ * @method LIYunde\MultiCas\CasServer default()
  */
 class Cas extends Facade {
 

@@ -1,4 +1,4 @@
-<?php namespace MultiCas;
+<?php namespace LIYunde\MultiCas;
 
 /**
  * Class MultiCasManager
